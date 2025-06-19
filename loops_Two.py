@@ -26,11 +26,18 @@
 #     elif i==a-1:
 #         print("It is a first number")
 #q4
-num=int(input("Please enter a number: "))
-for c in range(1,num+1):
-    if c<10:
-        b=str(c)+" "
-    else:
-        b=str(c)
-    a=num-c
-    print(" "*a,c*b)
+# num=int(input("Please enter a number: "))
+# for c in range(1,num+1):
+#     if c<10:
+#         b=str(c)+" "
+#     else:
+#         b=str(c)
+#     a=num-c
+#     print(" "*a,c*b)
+#q5
+number=input("Please enter a number: ")
+a=number[::-1]
+if number==a:
+    print("It is a palindrome")
+else:
+    print("It is not a palindrome")
