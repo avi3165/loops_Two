@@ -75,39 +75,52 @@
 # elif choose=="e":
 #     print(b/e)
 #q7
-users={}
-massage="hello men!"
-while True:
-    enter_1 = input("a. enter to the system\nb. make new user\nc. exit from the system\n")
-    if enter_1=="a":
-        name=input("enter user name:")
-        if name in users.keys():
-            for c in range(3):
-                password=input("enter password:")
-                if users[name]==password:
-                    options=input("a.print\nb.change password\nc.delete user\nd.return to main menu\ne.exit from the system\n")
-                    if options=="a":
-                        print(massage)
-                    elif options=="b":
-                        change_password=input("enter a new password")
-                        users[name]=change_password
-                    elif options=="c":
-                        users.pop(name)
-                    elif options=="d" or "*":
-                        break
-                    elif options=="e":
-                        exit()
-                elif password=="*":
-                    break
-        else:
-            print("user don't pound")
-            continue
-    elif enter_1=="b":
-        new_user_name=input("enter your user name:")
-        new_user_password=input("enter a password")
-        if new_user_name == "*" or new_user_password == "*":
-            continue
-        users[new_user_name]=new_user_password
-        continue
-    elif enter_1=="c":
-        break
+# users={}
+# massage="hello men!"
+# while True:
+#     enter_1 = input("a. enter to the system\nb. make new user\nc. exit from the system\n")
+#     if enter_1=="a":
+#         name=input("enter user name:")
+#         if name in users.keys():
+#             for c in range(3):
+#                 password=input("enter password:")
+#                 if users[name]==password:
+#                     options=input("a.print\nb.change password\nc.delete user\nd.return to main menu\ne.exit from the system\n")
+#                     if options=="a":
+#                         print(massage)
+#                     elif options=="b":
+#                         change_password=input("enter a new password")
+#                         users[name]=change_password
+#                     elif options=="c":
+#                         users.pop(name)
+#                     elif options=="d" or "*":
+#                         break
+#                     elif options=="e":
+#                         exit()
+#                 elif password=="*":
+#                     break
+#         else:
+#             print("user don't pound")
+#             continue
+#     elif enter_1=="b":
+#         new_user_name=input("enter your user name:")
+#         new_user_password=input("enter a password")
+#         if new_user_name == "*" or new_user_password == "*":
+#             continue
+#         users[new_user_name]=new_user_password
+#         continue
+#     elif enter_1=="c":
+#         break
+#q8
+num=int(input("Please enter a number:"))
+su=[]
+a=1
+for c in range(num):
+    if len(su)==1:
+        su.append(1)
+    else:
+        su.append(a)
+    a=su[c-1]+su[c]
+    print(su[c],end=" ")
+print(" ")
+print("the sum of all numbers is:",sum(su))
