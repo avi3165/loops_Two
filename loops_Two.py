@@ -35,9 +35,42 @@
 #     a=num-c
 #     print(" "*a,c*b)
 #q5
-number=input("Please enter a number: ")
-a=number[::-1]
-if number==a:
-    print("It is a palindrome")
-else:
-    print("It is not a palindrome")
+# number=input("Please enter a number: ")
+# a=number[::-1]
+# if number==a:
+#     print("It is a palindrome")
+# else:
+#     print("It is not a palindrome")
+#q6
+b=0
+numberS=[]
+even_numbers=[]
+odd_numbers=[]
+e=0
+while True:
+    number = input("please enter a number: ")
+    if number == "exit":
+        if len(numberS) == 0:
+            continue
+        else:
+            break
+    else:
+        number = int(number)
+        numberS.append(number)
+        if number%2==0:
+            even_numbers.append(number)
+        else:
+            odd_numbers.append(number)
+    b+= number
+    e+=1
+choose=input("Choose from the list\na.Show how much numbers you enter\nb.Show the sum\nc.Show even and odd numbers\nd.Show max and min number\ne.Show average\n")
+if choose=="a":
+    print(len(numberS))
+elif choose=="b":
+    print(b)
+elif choose=="c":
+    print("even numbers:",len(even_numbers),"\nodd numbers:",len(odd_numbers))
+elif choose=="d":
+    print("the max number:",max(numberS),"\nthe min number:",min(numberS))
+elif choose=="e":
+    print(b/e)
