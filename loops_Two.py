@@ -18,10 +18,19 @@
 #     a-=1
 #     print("*"*a)
 #q3
-a=int(input("Please enter a number:"))
-for i in range(2,a):
-    if a%i==0:
-        print("It is not a first number")
-        break
-    elif i==a-1:
-        print("It is a first number")
+# a=int(input("Please enter a number:"))
+# for i in range(2,a):
+#     if a%i==0:
+#         print("It is not a first number")
+#         break
+#     elif i==a-1:
+#         print("It is a first number")
+#q4
+num=int(input("Please enter a number: "))
+for c in range(1,num+1):
+    if c<10:
+        b=str(c)+" "
+    else:
+        b=str(c)
+    a=num-c
+    print(" "*a,c*b)
