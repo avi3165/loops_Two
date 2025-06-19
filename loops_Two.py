@@ -42,35 +42,72 @@
 # else:
 #     print("It is not a palindrome")
 #q6
-b=0
-numberS=[]
-even_numbers=[]
-odd_numbers=[]
-e=0
+# b=0
+# numberS=[]
+# even_numbers=[]
+# odd_numbers=[]
+# e=0
+# while True:
+#     number = input("please enter a number: ")
+#     if number == "exit":
+#         if len(numberS) == 0:
+#             continue
+#         else:
+#             break
+#     else:
+#         number = int(number)
+#         numberS.append(number)
+#         if number%2==0:
+#             even_numbers.append(number)
+#         else:
+#             odd_numbers.append(number)
+#     b+= number
+#     e+=1
+# choose=input("Choose from the list\na.Show how much numbers you enter\nb.Show the sum\nc.Show even and odd numbers\nd.Show max and min number\ne.Show average\n")
+# if choose=="a":
+#     print(len(numberS))
+# elif choose=="b":
+#     print(b)
+# elif choose=="c":
+#     print("even numbers:",len(even_numbers),"\nodd numbers:",len(odd_numbers))
+# elif choose=="d":
+#     print("the max number:",max(numberS),"\nthe min number:",min(numberS))
+# elif choose=="e":
+#     print(b/e)
+#q7
+users={}
+massage="hello men!"
 while True:
-    number = input("please enter a number: ")
-    if number == "exit":
-        if len(numberS) == 0:
+    enter_1 = input("a. enter to the system\nb. make new user\nc. exit from the system\n")
+    if enter_1=="a":
+        name=input("enter user name:")
+        if name in users.keys():
+            for c in range(3):
+                password=input("enter password:")
+                if users[name]==password:
+                    options=input("a.print\nb.change password\nc.delete user\nd.return to main menu\ne.exit from the system\n")
+                    if options=="a":
+                        print(massage)
+                    elif options=="b":
+                        change_password=input("enter a new password")
+                        users[name]=change_password
+                    elif options=="c":
+                        users.pop(name)
+                    elif options=="d" or "*":
+                        break
+                    elif options=="e":
+                        exit()
+                elif password=="*":
+                    break
+        else:
+            print("user don't pound")
             continue
-        else:
-            break
-    else:
-        number = int(number)
-        numberS.append(number)
-        if number%2==0:
-            even_numbers.append(number)
-        else:
-            odd_numbers.append(number)
-    b+= number
-    e+=1
-choose=input("Choose from the list\na.Show how much numbers you enter\nb.Show the sum\nc.Show even and odd numbers\nd.Show max and min number\ne.Show average\n")
-if choose=="a":
-    print(len(numberS))
-elif choose=="b":
-    print(b)
-elif choose=="c":
-    print("even numbers:",len(even_numbers),"\nodd numbers:",len(odd_numbers))
-elif choose=="d":
-    print("the max number:",max(numberS),"\nthe min number:",min(numberS))
-elif choose=="e":
-    print(b/e)
+    elif enter_1=="b":
+        new_user_name=input("enter your user name:")
+        new_user_password=input("enter a password")
+        if new_user_name == "*" or new_user_password == "*":
+            continue
+        users[new_user_name]=new_user_password
+        continue
+    elif enter_1=="c":
+        break
