@@ -1,0 +1,10 @@
+#q1
+for c in range(1,1001):
+    if c%15==0:
+        print("FuzzBuzz")
+    elif c%5==0:
+        print("Buzz")
+    elif c%3==0:
+        print("Fuzz")
+    else:
+        print(c)
